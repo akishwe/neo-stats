@@ -148,14 +148,13 @@ export default {
     },
 
     prepareChartData(asteroidCounts) {
-      // Format the labels from YYYY-MM-DD to DD-MM-YYYY
       const labels = Object.keys(asteroidCounts).map(date => {
         const [year, month, day] = date.split('-');
         return `${day}-${month}-${year}`;
       });
 
       return {
-        labels: labels, // Use the formatted labels here
+        labels: labels, 
         datasets: [
           {
             label: 'Asteroid Count',
